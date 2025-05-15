@@ -58,7 +58,7 @@ if uploaded_file is not None and interpreter is not None:
     try:
         # แสดงภาพที่อัปโหลด
         image = Image.open(uploaded_file).convert('RGB')  # แปลงเป็น RGB
-        st.image(image, caption='Uploaded Image', use_container_width=True, width=100)
+        st.image(image, caption='Uploaded Image', use_container_width=True, width=50)
 
         # ทำนาย
         with st.spinner('Predicting...'):
