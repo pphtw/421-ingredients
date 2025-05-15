@@ -39,7 +39,7 @@ def predict_image(interpreter, image):
 # Streamlit UI
 st.title("Image Classification App with VGG16")
 st.markdown("Upload an image to classify it using the VGG16 model (TensorFlow Lite).")
-st.info("This model can predict: avocado, beetroot, cabbage, carrots, plum tomatoes")
+st.markdown("This model can predict: avocado, beetroot, cabbage, carrots, plum tomatoes")
 
 # โหลดโมเดล TFLite
 try:
@@ -58,7 +58,7 @@ if uploaded_file is not None and interpreter is not None:
     try:
         # แสดงภาพที่อัปโหลด
         image = Image.open(uploaded_file).convert('RGB')  # แปลงเป็น RGB
-        st.image(image, caption='Uploaded Image', use_container_width=True)
+        st.image(image, caption='Uploaded Image', use_container_width=True, width=100)
 
         # ทำนาย
         with st.spinner('Predicting...'):
